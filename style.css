@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c5e4e7;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+/* Main container (title + tip calculator) */
+.container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Title */
+.title {
+  align-self: end;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  font-size: 0.5rem;
+  color: #00494d;
+}
+
+h1 span {
+  display: block;
+}
+
+/* Tip calculator container */
+.calc-container {
+  display: flex;
+  width: 53.125rem;
+  height: 23.75rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+}
+
+/* Calculator section */
+.calculator {
+  flex: 1;
+  display: grid;
+  padding: 2.5rem;
+}
+
+/* Display tip and total section */
+.display-tip {
+  flex: 1;
+  padding: 2.5rem;
+}

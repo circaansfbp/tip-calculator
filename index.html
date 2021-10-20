@@ -28,9 +28,16 @@
         <!-- Tip calculations (first column) -->
         <section class="calculator">
           <label for="bill">Bill</label>
-          <input type="number" class="bill-in" name="bill" id="bill" />
+          <input
+            type="number"
+            class="bill-in"
+            name="bill"
+            id="bill"
+            placeholder="0"
+          />
 
-          <p>Select tip %</p>
+          <!-- Buttons to select tip % -->
+          <p class="select-tip-p">Select tip %</p>
           <section class="select-tip">
             <button class="tip tip-5">5%</button>
             <button class="tip tip-10">10%</button>
@@ -42,6 +49,7 @@
               class="custom-tip-in"
               name="custom-tip"
               id="custom-tip"
+              placeholder="Custom"
             />
           </section>
 
@@ -51,21 +59,26 @@
             class="number-people-in"
             name="number-people"
             id="number-people"
+            placeholder="0"
           />
         </section>
 
         <!-- Tip and total display (second column) -->
         <section class="display-tip">
           <section class="tip-amount">
-            <p>Tip Amount</p>
-            <small class="per-person">/ person</small>
+            <div>
+              <p>Tip Amount</p>
+              <small class="per-person">/ person</small>
+            </div>
 
             <h2 class="amount">$0.00</h2>
           </section>
 
           <section class="total">
-            <p>Total</p>
-            <small class="per-person">/ person</small>
+            <div>
+              <p>Total</p>
+              <small class="per-person">/ person</small>
+            </div>
 
             <h2 class="total-per-person">$0.00</h2>
           </section>

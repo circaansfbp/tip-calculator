@@ -52,32 +52,54 @@ h1 span {
 .calculator {
   flex: 1;
   display: grid;
+  row-gap: 1.5625rem;
   padding-left: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  display: grid;
+  row-gap: 0.3125rem;
+  position: relative;
 }
 
 /* inputs */
 .bill-in,
 .number-people-in,
 .custom-tip-in {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: #00494d;
   text-align: center;
-  border: none;
+  border: 0.1875rem solid #f4fafa;
   background-color: #f4fafa;
   border-radius: 0.3125rem;
+}
+
+.bill-in:focus,
+.number-people-in:focus,
+.custom-tip-in:focus {
+  outline: none;
+  border: 0.1875rem solid #26c0ab;
+}
+
+/* Invalid class to add to invalid input */
+.invalid-input {
+  outline: none;
+  border: 0.1875rem solid #bb641e;
 }
 
 .bill-in,
 .number-people-in {
   height: 2.5rem;
+  width: 100%;
   text-align: end;
   padding-right: 1rem;
   padding-left: 2rem;
   background-repeat: no-repeat;
-  background-position: left;
   background-position: 1rem;
 }
 
@@ -108,18 +130,27 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /* labels */
 label,
-.select-tip-p {
+.label {
   align-self: end;
   font-size: 0.875rem;
   font-weight: 700;
-  margin-bottom: 0.3125rem;
   color: #5e7a7d;
+}
+
+/* Invalid msg to indicate invalid input to user */
+.label-invalid {
+  position: absolute;
+  right: 0;
+  top: 3px;
+  color: #bb641e;
+  display: none;
 }
 
 /* Select tip section */
 .select-tip {
   display: grid;
   grid-template-columns: 6.8125rem 6.8125rem 6.8125rem;
+  grid-template-rows: repeat(2, 1fr);
   gap: 0.75rem;
   align-items: center;
 }
@@ -130,10 +161,16 @@ label,
   border: none;
   border-radius: 0.3125rem;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   cursor: pointer;
   height: 100%;
+}
+
+/* Class to add dinamically after a button has been clicked */
+.clicked {
+  background-color: #26c0ab;
+  color: #00494d;
 }
 
 /* SECOND COLUMN: tip and total section */
@@ -144,7 +181,10 @@ label,
   margin-bottom: 2rem;
   background-color: #00494d;
   border-radius: 1rem;
-  padding: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 3rem;
   display: grid;
 }
 
@@ -153,4 +193,49 @@ label,
 .total {
   display: flex;
   justify-content: space-between;
+}
+
+/* tip and total texts */
+.tip-total-p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.per-person {
+  color: #7f9c9f;
+  font-weight: 700;
+}
+
+/* Amount displays */
+.amount {
+  font-size: 32px;
+  font-weight: 700;
+  color: #26c0ab;
+  align-self: flex-start;
+}
+
+/* Reset button */
+.reset {
+  height: 40px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #26c0ab;
+  color: #00494d;
+  border: none;
+  border-radius: 0.3125rem;
+  align-self: end;
+  cursor: pointer;
+}
+
+.reset:disabled {
+  opacity: 0.2;
+  cursor: auto;
+}
+
+/* On button click */
+.tip:active,
+.reset:active {
+  background-color: #c5e4e7;
+  color: #00494d;
 }

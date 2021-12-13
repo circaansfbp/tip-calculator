@@ -1,8 +1,5 @@
 'use strict';
 
-/** SOLO FALTA ARREGLAR MANEJO CORRECTO DE ESTILOS INVÁLIDOS AL BORRAR VALORES Y VOLVER A INGRESARLOS EN LOS INPUT DE LA CUENTA Y DE LAS PERSONAS */
-/** Y QUE AL APRETAR MÚLTIPLES BOTONES SE VAYA CAMBIANDO EL ESTILO 'CLICKED' DE BOTÓN A BOTÓN */
-
 // Inputs
 const billInput = document.querySelector('.bill-in');
 const customTipInput = document.querySelector('.custom-tip-in');
